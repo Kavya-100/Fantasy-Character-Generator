@@ -1,0 +1,6 @@
+{
+  "name": "Fantasy Character Generator",
+  "description": "An interactive fantasy character generator with procedural classes, races, abilities, and party roster management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

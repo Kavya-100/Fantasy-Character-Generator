@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cinzel", Georgia, serif;
+  --font-cinzel-decorative: "Cinzel Decorative", Georgia, serif;
+  --font-uncial: "Uncial Antiqua", cursive, Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0b0908;
+}
+
+.font-cinzel {
+  font-family: var(--font-display);
+}
+
+.font-cinzel-decorative {
+  font-family: "Cinzel Decorative", "Cinzel", Georgia, serif;
+}
+
+.font-uncial {
+  font-family: "Uncial Antiqua", cursive, serif;
+}
+
+/* Ancient Alchemist's Workbench Texture */
+.workbench-bg {
+  background-color: #0d0a08;
+  background-image: 
+    /* Ambient warm candlelight/lantern glow */
+    radial-gradient(circle at 50% 10%, rgba(217, 119, 6, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 15% 85%, rgba(180, 83, 9, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 85% 75%, rgba(99, 102, 241, 0.06) 0%, transparent 50%),
+    /* Wood plank vertical seams */
+    linear-gradient(90deg, 
+      rgba(0, 0, 0, 0.6) 0px, 
+      transparent 1px, 
+      transparent 140px, 
+      rgba(0, 0, 0, 0.45) 141px, 
+      rgba(0, 0, 0, 0.7) 142px
+    ),
+    /* Aged distressed timber grain texture */
+    repeating-linear-gradient(
+      0deg,
+      rgba(26, 18, 11, 0.95),
+      rgba(26, 18, 11, 0.95) 2px,
+      rgba(18, 13, 8, 0.95) 2px,
+      rgba(18, 13, 8, 0.95) 6px
+    );
+  background-attachment: fixed;
+}
+
+/* Enchanted Magical Glowing Border */
+.magical-glow-border {
+  animation: magicalPulse 4s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes magicalPulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 16px rgba(245, 158, 11, 0.18),
+      0 0 32px rgba(217, 119, 6, 0.1),
+      inset 0 0 12px rgba(245, 158, 11, 0.06);
+    border-color: rgba(217, 119, 6, 0.5);
+  }
+  50% {
+    box-shadow: 
+      0 0 26px rgba(245, 158, 11, 0.32),
+      0 0 48px rgba(192, 132, 252, 0.15),
+      inset 0 0 18px rgba(245, 158, 11, 0.1);
+    border-color: rgba(251, 191, 36, 0.75);
+  }
+}
